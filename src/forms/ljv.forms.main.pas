@@ -45,7 +45,7 @@ uses
 , SynEdit
 , SynHighlighterJScript
 , fpjson
-, VirtualTrees
+, laz.VirtualTrees
 , DefaultTranslator
 ;
 
@@ -75,7 +75,7 @@ type
     SynJScriptSyn: TSynJScriptSyn;
     tsTree: TTabSheet;
     tsJSON: TTabSheet;
-    vstJSON: TVirtualStringTree;
+    vstJSON: TLazVirtualStringTree;
     panItem: TPanel;
     procedure actViewTreeJSONExecute(Sender: TObject);
     procedure FormCreate(Sender: TObject);

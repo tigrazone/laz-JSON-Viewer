@@ -11,7 +11,7 @@ object frmMain: TfrmMain
   OnDestroy = FormDestroy
   OnDropFiles = FormDropFiles
   SessionProperties = 'Top;Left;Height;Width;WindowState'
-  LCLVersion = '2.3.0.0'
+  LCLVersion = '2.2.6.0'
   object lbFiles: TListBox
     Left = 0
     Height = 528
@@ -24,7 +24,6 @@ object frmMain: TfrmMain
     ScrollWidth = 217
     ShowHint = True
     TabOrder = 0
-    TopIndex = -1
   end
   object Splitter1: TSplitter
     Left = 219
@@ -43,10 +42,11 @@ object frmMain: TfrmMain
     TabOrder = 2
     object lblPath: TLabel
       Left = 8
-      Height = 17
+      Height = 15
       Top = 8
-      Width = 48
+      Width = 37
       Caption = 'lblPath'
+      ParentColor = False
     end
   end
   object pcMain: TPageControl
@@ -54,34 +54,34 @@ object frmMain: TfrmMain
     Height = 528
     Top = 0
     Width = 797
-    ActivePage = tsTree
+    ActivePage = tsJSON
     Align = alClient
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 3
     TabPosition = tpBottom
     object tsTree: TTabSheet
       Caption = '&Tree'
-      ClientHeight = 494
-      ClientWidth = 787
+      ClientHeight = 500
+      ClientWidth = 789
       object psMain: TPairSplitter
         Cursor = crDefault
         Left = 0
-        Height = 497
+        Height = 500
         Top = 0
-        Width = 787
+        Width = 789
         Align = alClient
         Position = 400
         object pssTree: TPairSplitterSide
           Cursor = crArrow
           Left = 0
-          Height = 497
+          Height = 500
           Top = 0
           Width = 400
           ClientWidth = 400
-          ClientHeight = 497
-          object vstJSON: TVirtualStringTree
+          ClientHeight = 500
+          object vstJSON: TLazVirtualStringTree
             Left = 0
-            Height = 497
+            Height = 500
             Top = 0
             Width = 400
             Align = alClient
@@ -90,7 +90,7 @@ object frmMain: TfrmMain
             Header.Columns = <            
               item
                 Position = 0
-                Width = 400
+                Width = 396
               end>
             Header.Options = [hoAutoResize, hoColumnResize, hoDrag, hoShowSortGlyphs]
             TabOrder = 0
@@ -103,72 +103,78 @@ object frmMain: TfrmMain
         object pssNode: TPairSplitterSide
           Cursor = crArrow
           Left = 405
-          Height = 497
+          Height = 500
           Top = 0
-          Width = 382
-          ClientWidth = 382
-          ClientHeight = 497
+          Width = 384
+          ClientWidth = 384
+          ClientHeight = 500
           object panItem: TPanel
             Left = 0
             Height = 80
             Top = 0
-            Width = 382
+            Width = 384
             Align = alTop
             ClientHeight = 80
-            ClientWidth = 382
+            ClientWidth = 384
             TabOrder = 0
             object lblType: TLabel
               Left = 8
-              Height = 17
+              Height = 15
               Top = 32
-              Width = 49
+              Width = 37
               Caption = 'lblType'
+              ParentColor = False
             end
             object lblName: TLabel
               Left = 8
-              Height = 17
+              Height = 15
               Top = 8
-              Width = 57
+              Width = 45
               Caption = 'lblName'
+              ParentColor = False
             end
             object lblCount: TLabel
               Left = 8
-              Height = 17
+              Height = 15
               Top = 56
-              Width = 57
+              Width = 46
               Caption = 'lblCount'
+              ParentColor = False
             end
           end
           object panValue: TPanel
             Left = 0
-            Height = 385
+            Height = 388
             Top = 112
-            Width = 382
+            Width = 384
             Anchors = [akTop, akLeft, akRight, akBottom]
             TabOrder = 1
           end
           object lblValue: TLabel
             Left = 0
-            Height = 17
+            Height = 15
             Top = 88
-            Width = 54
+            Width = 41
             Caption = 'lblValue'
+            ParentColor = False
           end
         end
       end
     end
     object tsJSON: TTabSheet
       Caption = '&JSON'
-      ClientHeight = 494
-      ClientWidth = 787
+      ClientHeight = 500
+      ClientWidth = 789
       inline SynEdit: TSynEdit
         Left = 0
-        Height = 497
+        Height = 500
         Top = 0
-        Width = 787
+        Width = 789
         Align = alClient
-        Font.Height = 13
-        Font.Name = 'DejaVu Sans Mono'
+        Color = clForm
+        Font.CharSet = 4
+        Font.Height = -13
+        Font.Name = 'Courier New'
         Font.Pitch = fpFixed
         Font.Quality = fqNonAntialiased
         ParentColor = False
@@ -686,7 +692,7 @@ object frmMain: TfrmMain
   object SynJScriptSyn: TSynJScriptSyn
     Enabled = False
     NumberAttri.Foreground = clGreen
-    StringAttri.Foreground = clFuchsia
+    StringAttri.Foreground = clBackground
     Left = 88
     Top = 448
   end

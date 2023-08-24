@@ -124,7 +124,7 @@
         <PackageName Value="SynEdit"/>
       </Item1>
       <Item2>
-        <PackageName Value="virtualtreeview_package"/>
+        <PackageName Value="laz.virtualtreeview_package"/>
       </Item2>
       <Item3>
         <PackageName Value="LCL"/>
@@ -170,7 +170,19 @@
       <OtherUnitFiles Value="forms;tree;json;application"/>
       <UnitOutputDirectory Value="../bin/lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <TargetCPU Value="x86_64"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
     <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
